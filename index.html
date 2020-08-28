@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      vue数据双向绑定
+    </title>
+  </head>
+
+  <body>
+      <div id="app">
+        <input v-model="title">
+        <h2>{{title}}</h2>
+        <button v-on:click='clickBtn'>数据初始化</button>
+      </div>
+  </body>
+  <script>
+      var vm = new SelfVue({
+          el: '#app',
+          data: {
+              title: 'hello world'
+          },
+          methods: {
+              clickBtn: function(e) {
+                  this.title = 'hello world'
+              }
+          }
+      })
+  </script>
+</html>
